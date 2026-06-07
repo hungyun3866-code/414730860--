@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👋 靜謐之境 | Serene Wave</title>
+
+  <!-- 引入 p5.js 主核心 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  
+  <!-- 引入 p5.js 聲音庫（為未來的舒壓背景音樂留伏筆，若不需要可保留不影響效能） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  
+  <!-- 引入 ml5.js 影像辨識庫 -->
+  <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+
+  <!-- 極簡風格 CSS 樣式設計 -->
+  <style>
+    /* 移除瀏覽器預設邊距，並讓背景保持優雅的極淺灰 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* 讓 p5.js 的畫布自帶淡淡的現代感陰影與圓角 */
+    canvas {
+      display: block;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+
+    /* 網頁加載提示（可選，在 AI 模型還沒載入完成前顯示，提升使用者體驗） */
+    #loading-hint {
+      position: absolute;
+      bottom: 20px;
+      color: #a0a0a0;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 提示文字，當畫布渲染出來後會自然退到後方 -->
+  <div id="loading-hint">互動藝術裝置 · 讀取中</div>
+
+  <!-- 引入你的 p5.js 邏輯程式檔 -->
+  <script src="sketch.js"></script>
+
+</body>
+</html>
